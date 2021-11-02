@@ -25,10 +25,10 @@ class Validation
             preg_match('/[^[:print:]]/', $string));
     }
 
-    public static function validateFormat(string $format): bool
+    public static function validateFormat(?string $format): bool
     {
         $formats = ['non-repeating', 'least-repeating', 'most-repeating'];
-        if (!in_array($format, $formats)) {
+        if (!in_array($format, $formats) || $format === null) {
             return false;
         }
         return true;

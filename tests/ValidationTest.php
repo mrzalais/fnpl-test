@@ -11,7 +11,7 @@ class ValidationTest extends TestCase
      */
     public function testFileExists(): void
     {
-        $path = 'test-files/myinput.txt';
+        $path = 'test-files/input.txt';
         $this->assertTrue(Validation::validateFileExists($path));
     }
 
